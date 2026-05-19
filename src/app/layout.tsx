@@ -10,6 +10,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aligientfreight.com"),
   title: "Agilent Freight | The Corridor Managers",
   description:
     "Agilent Freight delivers intelligent freight forwarding, corridor management, and trade logistics solutions across Southern Africa and global trade routes. Agile in Motion. Intelligent in Mind.",
@@ -27,12 +28,35 @@ export const metadata: Metadata = {
     "Zimbabwe",
     "Africa logistics",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icon.png", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "Agilent Freight | The Corridor Managers",
     description:
       "Intelligent freight forwarding and corridor management across Southern Africa and global trade routes.",
     type: "website",
     locale: "en_ZW",
+    images: [
+      {
+        url: "/images/og_share.png",
+        width: 1200,
+        height: 630,
+        alt: "Agilent Freight - The Corridor Managers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Agilent Freight | The Corridor Managers",
+    description:
+      "Intelligent freight forwarding and corridor management across Southern Africa and global trade routes.",
+    images: ["/images/og_share.png"],
   },
 };
 

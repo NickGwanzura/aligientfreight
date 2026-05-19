@@ -214,7 +214,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-heading text-5xl font-bold leading-[1.05] text-black md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight"
+            className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight"
           >
             <span className="block">Engineering</span>
             <span className="block">
