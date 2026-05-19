@@ -32,11 +32,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-6 text-neutral-500">
             <a
-              href="tel:+263XXXXXXXXX"
+              href="tel:+263789301172"
               className="flex items-center gap-2 hover:text-neutral-900 transition-colors"
             >
               <Phone className="w-3 h-3" />
-              <span>+263 XX XXX XXXX</span>
+              <span>+263 78 930 1172</span>
             </a>
             <a
               href="mailto:info@agilentfreight.com"

@@ -103,7 +103,7 @@ export default function ContactSection() {
             {/* Contact details */}
             <motion.div variants={itemVariants} className="space-y-5 mb-10">
               <a
-                href="tel:+263XXXXXXXXX"
+                href="tel:+263789301172"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
@@ -112,7 +112,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">Phone</p>
                   <p className="text-black font-semibold group-hover:text-neutral-700 transition-colors">
-                    +263 XX XXX XXXX
+                    +263 78 930 1172
                   </p>
                 </div>
               </a>
@@ -140,7 +140,7 @@ export default function ContactSection() {
                 </div>
               </div>
               <a
-                href="https://wa.me/263XXXXXXXXX"
+                href="https://wa.me/263789301172"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-500 transition-colors">
@@ -149,7 +149,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">WhatsApp</p>
                   <p className="text-black font-semibold group-hover:text-green-600 transition-colors">
-                    +263 XX XXX XXXX
+                    +263 78 930 1172
                   </p>
                 </div>
               </a>
@@ -236,7 +236,7 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:outline-none focus:border-neutral-400 focus:ring-2 focus:ring-neutral-200 transition-all text-black placeholder:text-neutral-400 bg-white"
-                    placeholder="+263 XX XXX XXXX"
+                    placeholder="+263 78 930 1172"
                   />
                 </div>
               </div>
@@ -284,27 +284,7 @@ export default function ContactSection() {
               </button>
             </motion.form>
 
-            {/* Map card */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-6 bg-neutral-50 border border-neutral-200 rounded-2xl p-6 text-black"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-neutral-200 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-black" />
-                </div>
-                <div>
-                  <p className="font-heading font-semibold">Our Headquarters</p>
-                  <p className="text-neutral-500 text-sm">3 Dale Road Malborough, Harare, Zimbabwe</p>
-                </div>
-              </div>
-              <div className="h-32 bg-neutral-200 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-neutral-500 mx-auto mb-2" />
-                  <p className="text-neutral-500 text-sm">Interactive Map</p>
-                </div>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>
