@@ -142,6 +142,16 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-neutral-400 text-xs tracking-wide">
             &copy; {new Date().getFullYear()} Agilent Freight. All rights reserved.
+            {" • "}
+            Developed by{" "}
+            <a
+              href="https://spiritus.co.zw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-500 hover:text-neutral-900 transition-colors font-medium underline"
+            >
+              Spiritus
+            </a>
           </p>
           <div className="flex items-center gap-6">
             <span className="text-neutral-400 text-xs hover:text-neutral-600 transition-colors cursor-default">Privacy Policy</span>
