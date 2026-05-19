@@ -2,13 +2,45 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Chirp Font Integration from X */
+@font-face {
+  font-family: 'Chirp';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Chirp'), url('https://fonts.cdnfonts.com/s/58951/ChirpRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chirp';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Chirp'), url('https://fonts.cdnfonts.com/s/58951/ChirpMedium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chirp';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Chirp'), url('https://fonts.cdnfonts.com/s/58951/ChirpBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Chirp';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Chirp'), url('https://fonts.cdnfonts.com/s/58951/ChirpHeavy.woff') format('woff');
+}
+@font-face {
+  font-family: 'ChirpExtended';
+  font-style: normal;
+  font-weight: 800;
+  src: local('ChirpExtended'), url('https://fonts.cdnfonts.com/s/58951/ChirpExtendedHeavy.woff') format('woff');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: Chirp, var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: Chirp, var(--font-geist), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
 
   /* Monochrome Palette */
