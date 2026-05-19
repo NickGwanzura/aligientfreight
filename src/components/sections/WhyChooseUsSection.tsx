@@ -18,7 +18,7 @@ const features = [
     icon: Award,
     title: "Industry Experience",
     description:
-      "25+ years navigating African trade regulations, border protocols, and corridor dynamics.",
+      "Deep expertise navigating African trade regulations, border protocols, and corridor dynamics.",
   },
   {
     icon: GitBranch,

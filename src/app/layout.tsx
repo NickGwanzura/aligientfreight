@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import CookieNotice from "@/components/CookieNotice";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -46,8 +47,9 @@ export default function RootLayout({
         className={`${geist.variable} scroll-smooth antialiased`}
       >
         <body className="min-h-screen bg-background font-sans text-foreground">
-        {children}
-      </body>
+          {children}
+          <CookieNotice />
+        </body>
     </html>
   );
 }

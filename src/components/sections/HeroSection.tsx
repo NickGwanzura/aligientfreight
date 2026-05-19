@@ -181,17 +181,31 @@ export default function HeroSection() {
         style={{ y: textY, opacity }}
       >
         <div className="mx-auto w-full max-w-7xl">
+          {/* Interactive Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-neutral-100 border border-neutral-200 px-4 py-2 rounded-full mb-6 max-w-fit"
+          >
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-[10px] font-bold text-neutral-800 tracking-wider uppercase">
+              SADC Corridor Network Active
+            </span>
+          </motion.div>
+
           {/* Top metadata row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-8 flex items-center gap-6 text-neutral-500 text-xs tracking-[0.2em] uppercase"
+            className="mb-8 flex items-center gap-4 text-neutral-500 text-xs tracking-[0.2em] uppercase flex-wrap"
           >
             <span>3 Dale Road Malborough, Harare, Zimbabwe</span>
             <span className="w-8 h-px bg-neutral-300 hidden sm:block" />
-            <span>Since 1999</span>
-            <span className="w-8 h-px bg-neutral-300" />
             <span>Global Freight Solutions</span>
           </motion.div>
 
@@ -240,14 +254,14 @@ export default function HeroSection() {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-black/90"
+              className="group relative inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-neutral-900 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden"
             >
               Request Freight Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#about"
-              className="group inline-flex items-center justify-center gap-3 border border-black/20 text-black px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:border-black/40 hover:bg-black/5"
+              className="group inline-flex items-center justify-center gap-3 border border-neutral-300 bg-white/50 backdrop-blur-sm text-neutral-800 px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 rounded-xl"
             >
               <Play className="h-4 w-4" />
               Explore Capabilities
