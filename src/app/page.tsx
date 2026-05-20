@@ -9,6 +9,8 @@ import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
 import IndustriesSection from "@/components/sections/IndustriesSection";
 import GlobalFootprintSection from "@/components/sections/GlobalFootprintSection";
 import ContactSection from "@/components/sections/ContactSection";
+import TradeFinanceSection from "@/components/sections/TradeFinanceSection";
+import CorridorSection from "@/components/sections/CorridorSection";
 
 export default function Home() {
   return (
@@ -19,8 +21,10 @@ export default function Home() {
         <TrustStrip />
         <AboutSection />
         <ServicesSection />
+        <TradeFinanceSection />
         <ProjectCargoSection />
         <WhyChooseUsSection />
+        <CorridorSection />
         <IndustriesSection />
         <GlobalFootprintSection />
         <ContactSection />
