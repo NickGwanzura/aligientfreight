@@ -92,7 +92,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="#contact"
-              className="px-5 py-2.5 bg-black text-white text-xs font-semibold tracking-wide uppercase hover:bg-black/90 transition-colors"
+              className="px-5 py-2.5 bg-lime text-lime-foreground text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-lime/85"
             >
               Get a Quote
             </a>

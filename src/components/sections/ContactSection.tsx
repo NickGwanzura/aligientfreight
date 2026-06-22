@@ -143,12 +143,12 @@ export default function ContactSection() {
                 href="https://wa.me/263789301172"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-500 transition-colors">
+                <div className="w-12 h-12 bg-lime rounded-xl flex items-center justify-center group-hover:bg-lime/80 transition-colors">
                   <MessageCircle className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">WhatsApp</p>
-                  <p className="text-black font-semibold group-hover:text-green-600 transition-colors">
+                  <p className="text-black font-semibold group-hover:text-lime transition-colors">
                     +263 78 930 1172
                   </p>
                 </div>
@@ -159,7 +159,7 @@ export default function ContactSection() {
             <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-black hover:bg-neutral-800 text-white font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-lime text-lime-foreground font-semibold rounded-lg transition-colors hover:bg-lime/85"
               >
                 <Send className="w-4 h-4" />
                 Request Quote
@@ -277,7 +277,7 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full py-4 bg-black hover:bg-neutral-800 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 bg-lime text-lime-foreground font-semibold rounded-lg transition-colors flex items-center justify-center gap-2 hover:bg-lime/85"
               >
                 Submit Inquiry
                 <ArrowRight className="w-4 h-4" />

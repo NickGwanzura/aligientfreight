@@ -254,7 +254,7 @@ export default function HeroSection() {
           >
             <a
               href="#contact"
-              className="group relative inline-flex items-center justify-center gap-3 bg-black text-white px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-neutral-900 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-3 bg-lime text-lime-foreground px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-lime/85 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden"
             >
               Request Freight Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
