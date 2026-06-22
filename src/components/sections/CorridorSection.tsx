@@ -98,7 +98,7 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
       {/* Animated glow line */}
       <motion.path
         d={pathD}
-        stroke="#00B4D8"
+        stroke="#90c030"
         strokeWidth="2"
         strokeLinecap="round"
         initial={{ pathLength: 0, opacity: 0 }}
@@ -109,7 +109,7 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
       {/* Moving cargo dot */}
       <motion.circle
         r="5"
-        fill="#00B4D8"
+        fill="#90c030"
         initial={{ offsetDistance: "0%" }}
         animate={{ offsetDistance: "100%" }}
         transition={{
@@ -120,14 +120,14 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
         }}
         style={{
           offsetPath: `path("${pathD}")`,
-          filter: "drop-shadow(0 0 6px rgba(0, 180, 216, 0.8))",
+          filter: "drop-shadow(0 0 6px rgba(144, 192, 48, 0.8))",
         }}
       />
       {/* Dot glow trail */}
       <motion.circle
         r="10"
         fill="none"
-        stroke="#00B4D8"
+        stroke="#90c030"
         strokeWidth="1"
         opacity={0.3}
         initial={{ offsetDistance: "0%" }}
@@ -342,7 +342,7 @@ export default function CorridorSection() {
             {[
               { label: "Durban Corridor", load: "92%", color: "bg-black" },
               { label: "Beira Corridor", load: "78%", color: "bg-black/70" },
-              { label: "Walvis Bay", load: "65%", color: "bg-cyan-500" },
+              { label: "Walvis Bay", load: "65%", color: "bg-lime" },
               { label: "Dar es Salaam", load: "54%", color: "bg-navy-600" },
             ].map((item, i) => (
               <motion.div

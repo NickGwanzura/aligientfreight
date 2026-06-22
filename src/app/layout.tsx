@@ -30,11 +30,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/favicon.ico", type: "image/x-icon" },
-      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.jpg", type: "image/jpeg" },
     ],
     apple: [
-      { url: "/icon.png", type: "image/png" },
+      { url: "/icon.jpg", type: "image/jpeg" },
     ],
   },
   openGraph: {
@@ -45,9 +44,9 @@ export const metadata: Metadata = {
     locale: "en_ZW",
     images: [
       {
-        url: "/images/og_share.png",
+        url: "/icon.jpg",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "Agilent Freight - The Corridor Managers",
       },
     ],
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     title: "Agilent Freight | The Corridor Managers",
     description:
       "Intelligent freight forwarding and corridor management across Southern Africa and global trade routes.",
-    images: ["/images/og_share.png"],
+    images: ["/icon.jpg"],
   },
 };
 

@@ -117,7 +117,7 @@ export default function ContactSection() {
                 </div>
               </a>
               <a
-                href="mailto:info@agilentfreight.com"
+                href="mailto:Info@agilentzw.com"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
@@ -126,7 +126,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">Email</p>
                   <p className="text-black font-semibold group-hover:text-neutral-700 transition-colors">
-                    info@agilentfreight.com
+                    Info@agilentzw.com
                   </p>
                 </div>
               </a>

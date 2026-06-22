@@ -44,17 +44,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-9 h-9 bg-black flex items-center justify-center">
-                <span className="text-white font-bold text-sm font-heading">A</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-black font-heading font-bold text-sm tracking-tight leading-tight">
-                  AGILENT
-                </span>
-                <span className="text-neutral-400 text-[9px] font-heading font-medium tracking-[0.25em] leading-tight">
-                  FREIGHT
-                </span>
-              </div>
+              <img
+                src="/logox.png"
+                alt="Agilent Freight"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-neutral-500 text-sm leading-relaxed mb-6 max-w-sm">
               The Corridor Managers. Delivering intelligent freight forwarding,
@@ -128,8 +122,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-neutral-400 shrink-0" />
-                <a href="mailto:info@agilentfreight.com" className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors">
-                  info@agilentfreight.com
+                <a href="mailto:Info@agilentzw.com" className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors">
+                  Info@agilentzw.com
                 </a>
               </li>
             </ul>
@@ -145,7 +139,7 @@ export default function Footer() {
             {" • "}
             Developed by{" "}
             <a
-              href="https://spiritus.co.zw"
+              href="https://spiritusglobal.tech"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-500 hover:text-neutral-900 transition-colors font-medium underline"

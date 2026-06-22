@@ -39,11 +39,11 @@ export default function Navbar() {
               <span>+263 78 930 1172</span>
             </a>
             <a
-              href="mailto:info@agilentfreight.com"
+              href="mailto:Info@agilentzw.com"
               className="flex items-center gap-2 hover:text-neutral-900 transition-colors"
             >
               <Mail className="w-3 h-3" />
-              <span>info@agilentfreight.com</span>
+              <span>Info@agilentzw.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4 text-[10px] text-neutral-400 tracking-wider uppercase">
@@ -68,17 +68,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-black flex items-center justify-center">
-              <span className="text-white font-bold text-sm font-heading">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-black font-heading font-bold text-sm tracking-tight leading-tight">
-                AGILENT
-              </span>
-              <span className="text-neutral-500 text-[9px] font-heading font-medium tracking-[0.25em] leading-tight">
-                FREIGHT
-              </span>
-            </div>
+            <img
+              src="/logox.png"
+              alt="Agilent Freight"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

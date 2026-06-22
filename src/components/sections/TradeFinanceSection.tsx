@@ -205,7 +205,7 @@ export default function TradeFinanceSection() {
                     {[
                       { label: "Q1", value: 42, color: "bg-navy-700" },
                       { label: "Q2", value: 58, color: "bg-navy-600" },
-                      { label: "Q3", value: 76, color: "bg-cyan-600" },
+                      { label: "Q3", value: 76, color: "bg-lime" },
                       { label: "Q4", value: 92, color: "bg-black" },
                     ].map((bar) => (
                       <div key={bar.label} className="flex flex-1 flex-col items-center gap-1.5">
