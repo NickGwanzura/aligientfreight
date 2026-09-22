@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     locale: "en_ZW",
     images: [
       {
-        url: "/icon.jpg",
-        width: 1200,
-        height: 1200,
+        url: "/images/og_share.png",
+        width: 1024,
+        height: 1024,
         alt: "Agilent Freight - The Corridor Managers",
       },
     ],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Agilent Freight | The Corridor Managers",
     description:
       "Intelligent freight forwarding and corridor management across Southern Africa and global trade routes.",
-    images: ["/icon.jpg"],
+    images: ["/images/og_share.png"],
   },
 };
 
