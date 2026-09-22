@@ -59,11 +59,11 @@
   --color-ivory: #F5F5F5;
   --color-white: #FFFFFF;
 
-  /* Logo Palette */
-  --color-navy-700: #002030;
-  --color-navy-600: #003048;
-  --color-lime: #90c030;
-  --color-lime-foreground: #002030;
+  /* Agilient Freight brand palette */
+  --color-navy-700: #1E5F96;
+  --color-navy-600: #245F8F;
+  --color-lime: #2B78B8;
+  --color-lime-foreground: #FFFFFF;
 
   /* Accent */
   --color-accent: var(--accent);
@@ -110,37 +110,37 @@
 
 :root {
   --background: #FFFFFF;
-  --foreground: #002030;
+  --foreground: #173B5A;
   --card: #F8F8F8;
   --card-foreground: #002030;
   --popover: #FFFFFF;
   --popover-foreground: #002030;
-  --primary: #002030;
+  --primary: #245F8F;
   --primary-foreground: #FFFFFF;
   --secondary: #F0F0F0;
   --secondary-foreground: #002030;
   --muted: #F0F0F0;
   --muted-foreground: #666666;
-  --accent: #90c030;
-  --accent-foreground: #002030;
+  --accent: #2B78B8;
+  --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
   --border: rgba(0, 32, 48, 0.1);
   --input: rgba(0, 32, 48, 0.1);
-  --ring: #90c030;
-  --chart-1: #002030;
-  --chart-2: #90c030;
+  --ring: #2B78B8;
+  --chart-1: #245F8F;
+  --chart-2: #2B78B8;
   --chart-3: #003048;
   --chart-4: #888888;
   --chart-5: #D4D4D4;
   --radius: 0.5rem;
   --sidebar: #FFFFFF;
   --sidebar-foreground: #002030;
-  --sidebar-primary: #002030;
+  --sidebar-primary: #245F8F;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #90c030;
-  --sidebar-accent-foreground: #002030;
+  --sidebar-accent: #2B78B8;
+  --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: rgba(0, 32, 48, 0.1);
-  --sidebar-ring: #90c030;
+  --sidebar-ring: #2B78B8;
 }
 
 .dark {
@@ -156,25 +156,25 @@
   --secondary-foreground: #E8EDEE;
   --muted: #002030;
   --muted-foreground: #8899A0;
-  --accent: #90c030;
+  --accent: #2B78B8;
   --accent-foreground: #002030;
   --destructive: #EF4444;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.12);
-  --ring: #90c030;
-  --chart-1: #90c030;
+  --ring: #2B78B8;
+  --chart-1: #2B78B8;
   --chart-2: #002030;
   --chart-3: #E8EDEE;
   --chart-4: #003048;
   --chart-5: #8899A0;
   --sidebar: #001218;
   --sidebar-foreground: #E8EDEE;
-  --sidebar-primary: #90c030;
+  --sidebar-primary: #2B78B8;
   --sidebar-primary-foreground: #002030;
-  --sidebar-accent: #90c030;
+  --sidebar-accent: #2B78B8;
   --sidebar-accent-foreground: #002030;
   --sidebar-border: rgba(255, 255, 255, 0.08);
-  --sidebar-ring: #90c030;
+  --sidebar-ring: #2B78B8;
 }
 
 @layer base {
@@ -214,8 +214,8 @@ html {
 
 /* Selection */
 ::selection {
-  background: rgba(144, 192, 48, 0.25);
-  color: #002030;
+  background: rgba(43, 120, 184, 0.2);
+  color: #173B5A;
 }
 
 /* Film grain overlay */

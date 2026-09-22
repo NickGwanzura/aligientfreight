@@ -169,7 +169,7 @@ export default function ServicesSection() {
                   y: -4,
                   transition: { duration: 0.25, ease: "easeOut" as const },
                 }}
-                className="group relative bg-white border border-neutral-200 rounded-xl p-5 md:p-6 transition-all duration-300 hover:border-neutral-300 hover:shadow-lg hover:shadow-neutral-200/50 cursor-pointer"
+                className="group relative bg-white border border-neutral-200 rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#2B78B8]/40 hover:shadow-xl hover:shadow-[#2B78B8]/10 cursor-pointer"
               >
                 {/* Icon */}
                 <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-neutral-200">

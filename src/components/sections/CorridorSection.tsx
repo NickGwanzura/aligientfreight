@@ -98,7 +98,7 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
       {/* Animated glow line */}
       <motion.path
         d={pathD}
-        stroke="#90c030"
+        stroke="#2B78B8"
         strokeWidth="2"
         strokeLinecap="round"
         initial={{ pathLength: 0, opacity: 0 }}
@@ -109,7 +109,7 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
       {/* Moving cargo dot */}
       <motion.circle
         r="5"
-        fill="#90c030"
+        fill="#2B78B8"
         initial={{ offsetDistance: "0%" }}
         animate={{ offsetDistance: "100%" }}
         transition={{
@@ -127,7 +127,7 @@ function AnimatedRouteLine({ pathD, pathLength }: { pathD: string; pathLength: n
       <motion.circle
         r="10"
         fill="none"
-        stroke="#90c030"
+        stroke="#2B78B8"
         strokeWidth="1"
         opacity={0.3}
         initial={{ offsetDistance: "0%" }}
@@ -154,7 +154,7 @@ function CorridorCard({ corridor, index }: { corridor: Corridor; index: number }
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
       whileHover={{ y: -6, transition: { duration: 0.3 } }}
-      className="group relative rounded-2xl border border-neutral-200 bg-gradient-to-br from-neutral-50 to-white p-6 overflow-hidden"
+      className="group relative rounded-2xl border border-neutral-200 bg-gradient-to-br from-neutral-50 to-white p-6 overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#2B78B8]/40 hover:shadow-xl hover:shadow-[#2B78B8]/10"
     >
       {/* Hover glow border */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"

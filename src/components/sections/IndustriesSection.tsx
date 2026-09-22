@@ -121,7 +121,7 @@ export default function IndustriesSection() {
                 y: -6,
                 boxShadow: "0 25px 50px -12px rgba(7, 27, 42, 0.15)",
               }}
-              className="bg-white rounded-xl p-6 border border-neutral-200 hover:border-neutral-300 transition-all cursor-default shadow-sm hover:shadow-md"
+              className="bg-white rounded-2xl p-6 border border-neutral-200 hover:-translate-y-1 hover:border-[#2B78B8]/40 transition-all cursor-default shadow-sm hover:shadow-xl hover:shadow-[#2B78B8]/10"
             >
               <div className="w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center mb-5">
                 <industry.icon className="w-7 h-7 text-neutral-600" />

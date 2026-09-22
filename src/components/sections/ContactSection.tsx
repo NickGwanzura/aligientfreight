@@ -116,6 +116,15 @@ export default function ContactSection() {
                   </p>
                 </div>
               </a>
+              <a href="tel:+263242313707" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
+                  <Phone className="w-5 h-5 text-black" />
+                </div>
+                <div>
+                  <p className="text-xs text-neutral-500 uppercase tracking-wider">Landline</p>
+                  <p className="text-black font-semibold group-hover:text-neutral-700 transition-colors">+263 24 231 3707</p>
+                </div>
+              </a>
               <a
                 href="mailto:Info@agilentzw.com"
                 className="flex items-center gap-4 group"

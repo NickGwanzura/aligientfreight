@@ -143,7 +143,7 @@ export default function WhyChooseUsSection() {
                   y: -4,
                   transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const },
                 }}
-                className="group rounded-xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm transition-all duration-300 hover:border-neutral-300 hover:shadow-md"
+                className="group rounded-2xl border border-neutral-200 bg-neutral-50 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#2B78B8]/40 hover:shadow-xl hover:shadow-[#2B78B8]/10"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white border border-neutral-200 shadow-sm">
                   <Icon

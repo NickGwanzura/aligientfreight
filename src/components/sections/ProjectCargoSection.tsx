@@ -57,7 +57,7 @@ function CargoCardComponent({ card, index }: { card: CargoCard; index: number })
         ease: [0.25, 0.1, 0.25, 1],
       }}
       whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
-      className="group relative rounded-2xl border border-neutral-200 bg-white p-8 overflow-hidden"
+      className="group relative rounded-2xl border border-neutral-200 bg-white p-8 overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#2B78B8]/40 hover:shadow-xl hover:shadow-[#2B78B8]/10"
     >
       {/* Hover border glow */}
       <div

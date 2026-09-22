@@ -177,7 +177,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 flex min-h-screen flex-col justify-center pt-32 lg:pt-40 px-6 pb-16 md:px-12 lg:px-20"
+        className="relative z-10 flex min-h-[100svh] flex-col justify-center px-5 pb-12 pt-28 sm:px-6 sm:pt-32 md:px-12 md:pb-16 lg:pt-40 lg:px-20"
         style={{ y: textY, opacity }}
       >
         <div className="mx-auto w-full max-w-7xl">
@@ -186,11 +186,11 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-neutral-100 border border-neutral-200 px-4 py-2 rounded-full mb-6 max-w-fit"
+            className="inline-flex items-center gap-2 bg-[#2B78B8]/10 border border-[#2B78B8]/20 px-3.5 py-2 rounded-full mb-5 sm:mb-6 max-w-fit"
           >
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2B78B8] opacity-50"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2B78B8]"></span>
             </span>
             <span className="text-[10px] font-bold text-neutral-800 tracking-wider uppercase">
               SADC Corridor Network Active
@@ -202,7 +202,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-8 flex items-center gap-4 text-neutral-500 text-xs tracking-[0.2em] uppercase flex-wrap"
+            className="mb-6 sm:mb-8 flex max-w-xs items-center gap-3 text-neutral-500 text-[9px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase flex-wrap"
           >
             <span>3 Dale Road Malborough, Harare, Zimbabwe</span>
             <span className="w-8 h-px bg-neutral-300 hidden sm:block" />
@@ -214,7 +214,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight"
+            className="font-heading text-[2.85rem] leading-[0.98] sm:text-6xl sm:leading-none md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight"
           >
             <span className="block">Engineering</span>
             <span className="block">
@@ -222,7 +222,7 @@ export default function HeroSection() {
               <span className="relative inline-block">
                 <span className="relative z-10">Flow</span>
                 <motion.span
-                  className="absolute bottom-1 left-0 h-2 md:h-3 lg:h-4 bg-black/10"
+                  className="absolute bottom-0.5 left-0 h-2 md:h-3 lg:h-4 bg-[#2B78B8]/20"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -238,7 +238,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-8 max-w-xl text-base text-neutral-600 md:text-lg leading-relaxed"
+            className="mt-6 sm:mt-8 max-w-xl text-[15px] sm:text-base text-neutral-600 md:text-lg leading-relaxed"
           >
             Agilent Freight delivers intelligent freight forwarding, corridor
             management, and trade logistics solutions across Southern Africa and
@@ -250,18 +250,18 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 sm:mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
           >
             <a
               href="#contact"
-              className="group relative inline-flex items-center justify-center gap-3 bg-lime text-lime-foreground px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-lime/85 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden"
+              className="group relative inline-flex min-h-14 w-full items-center justify-center gap-3 bg-lime text-lime-foreground px-6 py-4 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase transition-all hover:bg-lime/85 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden sm:w-auto sm:px-8"
             >
               Request Freight Quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#about"
-              className="group inline-flex items-center justify-center gap-3 border border-neutral-300 bg-white/50 backdrop-blur-sm text-neutral-800 px-8 py-4 text-sm font-semibold tracking-wide uppercase transition-all hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 rounded-xl"
+              className="group inline-flex min-h-14 w-full items-center justify-center gap-3 border border-neutral-300 bg-white/60 backdrop-blur-sm text-neutral-800 px-6 py-4 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase transition-all hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 rounded-xl sm:w-auto sm:px-8"
             >
               <Play className="h-4 w-4" />
               Explore Capabilities
@@ -273,7 +273,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="mt-16 md:mt-24 grid grid-cols-3 gap-8 border-t border-neutral-200 pt-8 max-w-lg"
+            className="mt-12 sm:mt-16 md:mt-24 grid grid-cols-3 gap-3 sm:gap-8 border-t border-neutral-200 pt-6 sm:pt-8 max-w-lg"
           >
             {[
               { value: "15+", label: "Countries" },
@@ -281,10 +281,10 @@ export default function HeroSection() {
               { value: "99.2%", label: "On-Time" },
             ].map((stat) => (
               <div key={stat.label} className="text-left">
-                <div className="text-2xl md:text-3xl font-heading font-bold text-black">
+                <div className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-black">
                   {stat.value}
                 </div>
-                <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.2em] text-neutral-500">
                   {stat.label}
                 </div>
               </div>

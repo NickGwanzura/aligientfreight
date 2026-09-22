@@ -37,20 +37,20 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-50 text-neutral-900 border-t border-neutral-200">
+    <footer className="bg-[#2B78B8] text-white border-t border-white/20">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-3 mb-6">
               <img
-                src="/logox.png"
+                src="/agilient-freight-logo.svg"
                 alt="Agilent Freight"
-                className="h-10 w-auto"
+                className="h-11 w-auto text-[#245F8F]"
               />
             </div>
-            <p className="text-neutral-500 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-sm">
               The Corridor Managers. Delivering intelligent freight forwarding,
               corridor management, and trade logistics solutions across Southern
               Africa and global trade routes.
@@ -64,9 +64,9 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 border border-neutral-200 flex items-center justify-center transition-colors hover:border-neutral-300 hover:bg-neutral-100"
+                  className="w-10 h-10 border border-white/25 flex items-center justify-center transition-colors hover:border-white/50 hover:bg-white/10"
                 >
-                  <social.icon className="w-4 h-4 text-neutral-500" />
+                  <social.icon className="w-4 h-4 text-white/80" />
                 </a>
               ))}
             </div>
@@ -74,13 +74,13 @@ export default function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-neutral-400">
+            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-white/60">
               Services
             </h4>
             <ul className="space-y-3">
               {footerLinks.services.map((service) => (
                 <li key={service}>
-                  <span className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors cursor-default">
+                  <span className="text-white/80 text-sm hover:text-white transition-colors cursor-default">
                     {service}
                   </span>
                 </li>
@@ -90,13 +90,13 @@ export default function Footer() {
 
           {/* Corridors */}
           <div className="lg:col-span-3">
-            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-neutral-400">
+            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-white/60">
               Trade Corridors
             </h4>
             <ul className="space-y-3">
               {footerLinks.corridors.map((corridor) => (
                 <li key={corridor}>
-                  <span className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors cursor-default">
+                  <span className="text-white/80 text-sm hover:text-white transition-colors cursor-default">
                     {corridor}
                   </span>
                 </li>
@@ -106,23 +106,29 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-2">
-            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-neutral-400">
+            <h4 className="font-heading font-medium text-[10px] tracking-[0.2em] uppercase mb-6 text-white/60">
               Contact
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-neutral-400 mt-0.5 shrink-0" />
-                <span className="text-neutral-500 text-sm">3 Dale Road Malborough, Harare, Zimbabwe</span>
+                <MapPin className="w-4 h-4 text-white/60 mt-0.5 shrink-0" />
+                <span className="text-white/80 text-sm">3 Dale Road Malborough, Harare, Zimbabwe</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-neutral-400 shrink-0" />
-                <a href="tel:+263789301172" className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors">
+                <Phone className="w-4 h-4 text-white/60 shrink-0" />
+                <a href="tel:+263789301172" className="text-white/80 text-sm hover:text-white transition-colors">
                   +263 78 930 1172
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-neutral-400 shrink-0" />
-                <a href="mailto:Info@agilentzw.com" className="text-neutral-500 text-sm hover:text-neutral-900 transition-colors">
+                <Phone className="w-4 h-4 text-white/60 shrink-0" />
+                <a href="tel:+263242313707" className="text-white/80 text-sm hover:text-white transition-colors">
+                  +263 24 231 3707
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-white/60 shrink-0" />
+                <a href="mailto:Info@agilentzw.com" className="text-white/80 text-sm hover:text-white transition-colors">
                   Info@agilentzw.com
                 </a>
               </li>
@@ -132,9 +138,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-neutral-200">
+      <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-neutral-400 text-xs tracking-wide">
+          <p className="text-white/60 text-xs tracking-wide">
             &copy; {new Date().getFullYear()} Agilent Freight. All rights reserved.
             {" • "}
             Developed by{" "}
@@ -142,14 +148,14 @@ export default function Footer() {
               href="https://spiritusglobal.tech"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neutral-500 hover:text-neutral-900 transition-colors font-medium underline"
+              className="text-white/80 hover:text-white transition-colors font-medium underline"
             >
               Spiritus
             </a>
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-neutral-400 text-xs hover:text-neutral-600 transition-colors cursor-default">Privacy Policy</span>
-            <span className="text-neutral-400 text-xs hover:text-neutral-600 transition-colors cursor-default">Terms of Service</span>
+            <span className="text-white/60 text-xs hover:text-white transition-colors cursor-default">Privacy Policy</span>
+            <span className="text-white/60 text-xs hover:text-white transition-colors cursor-default">Terms of Service</span>
           </div>
         </div>
       </div>

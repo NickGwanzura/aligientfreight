@@ -46,8 +46,8 @@ export default function GlobalFootprintSection() {
         >
           <div className="relative aspect-[16/9] max-h-[600px] w-full overflow-hidden rounded-xl shadow-inner border border-neutral-200">
             <Image
-              src="/images/world_trade_map.png"
-              alt="Global Trade Routes & Shipping Paths Map"
+              src="/global-logistics-port.png"
+              alt="Container ship, cargo aircraft, and freight trucks at a modern trade port"
               fill
               className="object-cover"
             />
