@@ -126,6 +126,14 @@ export default function Footer() {
                   +263 24 231 3707
                 </a>
               </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-white/60 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+263790237002" className="text-white/80 text-sm hover:text-white transition-colors">+263 79 023 7002</a>
+                  <a href="tel:+263790237004" className="text-white/80 text-sm hover:text-white transition-colors">+263 79 023 7004</a>
+                  <a href="tel:+263784779835" className="text-white/80 text-sm hover:text-white transition-colors">078 477 9835</a>
+                </div>
+              </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-white/60 shrink-0" />
                 <a href="mailto:Info@agilentzw.com" className="text-white/80 text-sm hover:text-white transition-colors">
