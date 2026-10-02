@@ -11,11 +11,26 @@ interface Particle {
   size: number;
   speed: number;
   opacity: number;
+  drift: number;
+  duration: number;
+  delay: number;
 }
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [particles, setParticles] = useState<Particle[]>([]);
+  const [particles] = useState<Particle[]>(() =>
+    Array.from({ length: 40 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 2 + 0.5,
+      speed: Math.random() * 0.5 + 0.2,
+      opacity: Math.random() * 0.4 + 0.1,
+      drift: Math.random() * 20 - 10,
+      duration: 8 + Math.random() * 12,
+      delay: Math.random() * 5,
+    }))
+  );
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   const { scrollYProgress } = useScroll({
@@ -30,18 +45,6 @@ export default function HeroSection() {
 
   const smoothMouseX = useSpring(0, { stiffness: 50, damping: 20 });
   const smoothMouseY = useSpring(0, { stiffness: 50, damping: 20 });
-
-  useEffect(() => {
-    const p: Particle[] = Array.from({ length: 40 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2 + 0.5,
-      speed: Math.random() * 0.5 + 0.2,
-      opacity: Math.random() * 0.4 + 0.1,
-    }));
-    setParticles(p);
-  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -97,14 +100,14 @@ export default function HeroSection() {
             }}
             animate={{
               y: [0, -30, 0],
-              x: [0, Math.random() * 20 - 10, 0],
+              x: [0, particle.drift, 0],
               opacity: [particle.opacity, particle.opacity * 1.5, particle.opacity],
             }}
             transition={{
-              duration: 8 + Math.random() * 12,
+              duration: particle.duration,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: Math.random() * 5,
+              delay: particle.delay,
             }}
           />
         ))}

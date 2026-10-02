@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -75,10 +76,12 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <img
+            <Image
               src="/agilient-freight-logo.svg"
               alt="Agilent Freight"
               className="h-11 w-auto"
+              width={220}
+              height={54}
             />
           </Link>
 

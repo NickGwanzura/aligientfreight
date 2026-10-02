@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -44,10 +44,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <div className="inline-flex items-center gap-3 mb-6">
-              <img
+              <Image
                 src="/agilient-freight-logo.svg"
                 alt="Agilent Freight"
                 className="h-11 w-auto text-[#245F8F]"
+                width={220}
+                height={54}
               />
             </div>
             <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-sm">

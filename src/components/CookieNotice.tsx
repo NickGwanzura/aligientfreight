@@ -1,17 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function CookieNotice() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      setIsOpen(true);
-    }
-  }, []);
+  const [isOpen, setIsOpen] = useState(() =>
+    typeof window !== "undefined" && !localStorage.getItem("cookie-consent")
+  );
 
   const handleAccept = () => {
     localStorage.setItem("cookie-consent", "accepted");
