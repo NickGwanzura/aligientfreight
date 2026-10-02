@@ -112,7 +112,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-white/60 mt-0.5 shrink-0" />
-                <span className="text-white/80 text-sm">3 Dale Road Malborough, Harare, Zimbabwe</span>
+                <span className="text-white/80 text-sm">3 Dale Road Marlborough, Harare, Zimbabwe</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-white/60 shrink-0" />
@@ -131,13 +131,13 @@ export default function Footer() {
                 <div className="flex flex-col gap-1">
                   <a href="tel:+263790237002" className="text-white/80 text-sm hover:text-white transition-colors">+263 79 023 7002</a>
                   <a href="tel:+263790237004" className="text-white/80 text-sm hover:text-white transition-colors">+263 79 023 7004</a>
-                  <a href="tel:+263784779835" className="text-white/80 text-sm hover:text-white transition-colors">078 477 9835</a>
+                  <a href="tel:+263784779835" className="text-white/80 text-sm hover:text-white transition-colors">+263 78 477 9835</a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-white/60 shrink-0" />
-                <a href="mailto:Info@agilentzw.com" className="text-white/80 text-sm hover:text-white transition-colors">
-                  Info@agilentzw.com
+                <a href="mailto:info@agilentzw.com" className="text-white/80 text-sm hover:text-white transition-colors">
+                  info@agilentzw.com
                 </a>
               </li>
             </ul>
@@ -162,8 +162,8 @@ export default function Footer() {
             </a>
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-white/60 text-xs hover:text-white transition-colors cursor-default">Privacy Policy</span>
-            <span className="text-white/60 text-xs hover:text-white transition-colors cursor-default">Terms of Service</span>
+            <a href="/privacy" className="text-white/60 text-xs hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="text-white/60 text-xs hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -134,12 +134,12 @@ export default function ContactSection() {
                   <div className="flex flex-col gap-1">
                     <a href="tel:+263790237002" className="text-black font-semibold hover:text-neutral-700 transition-colors">+263 79 023 7002</a>
                     <a href="tel:+263790237004" className="text-black font-semibold hover:text-neutral-700 transition-colors">+263 79 023 7004</a>
-                    <a href="tel:+263784779835" className="text-black font-semibold hover:text-neutral-700 transition-colors">078 477 9835</a>
+                    <a href="tel:+263784779835" className="text-black font-semibold hover:text-neutral-700 transition-colors">+263 78 477 9835</a>
                   </div>
                 </div>
               </div>
               <a
-                href="mailto:Info@agilentzw.com"
+                href="mailto:info@agilentzw.com"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
@@ -148,7 +148,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">Email</p>
                   <p className="text-black font-semibold group-hover:text-neutral-700 transition-colors">
-                    Info@agilentzw.com
+                    info@agilentzw.com
                   </p>
                 </div>
               </a>
@@ -158,7 +158,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs text-neutral-500 uppercase tracking-wider">Location</p>
-                  <p className="text-black font-semibold">3 Dale Road Malborough, Harare, Zimbabwe</p>
+                  <p className="text-black font-semibold">3 Dale Road Marlborough, Harare, Zimbabwe</p>
                 </div>
               </div>
               <a

@@ -204,7 +204,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-6 sm:mb-8 flex max-w-xs items-center gap-3 text-neutral-500 text-[9px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase flex-wrap"
           >
-            <span>3 Dale Road Malborough, Harare, Zimbabwe</span>
+            <span>3 Dale Road Marlborough, Harare, Zimbabwe</span>
             <span className="w-8 h-px bg-neutral-300 hidden sm:block" />
             <span>Global Freight Solutions</span>
           </motion.div>

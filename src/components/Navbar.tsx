@@ -39,15 +39,22 @@ export default function Navbar() {
               <span>+263 24 231 3707</span>
             </a>
             <a
-              href="mailto:Info@agilentzw.com"
+              href="mailto:info@agilentzw.com"
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Mail className="w-3 h-3" />
-              <span>Info@agilentzw.com</span>
+              <span>info@agilentzw.com</span>
+            </a>
+            <a
+              href="tel:+263784779835"
+              className="flex items-center gap-2 hover:text-white transition-colors"
+            >
+              <Phone className="w-3 h-3" />
+              <span>+263 78 477 9835</span>
             </a>
           </div>
           <div className="flex items-center gap-4 text-[10px] text-white/65 tracking-wider uppercase">
-            <span>3 Dale Road Malborough, Harare, Zimbabwe</span>
+            <span>3 Dale Road Marlborough, Harare, Zimbabwe</span>
             <span className="w-px h-3 bg-white/30" />
             <span>The Corridor Managers</span>
           </div>
