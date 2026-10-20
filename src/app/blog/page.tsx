@@ -9,11 +9,31 @@ export const metadata: Metadata = {
   title: "The Government Is Already in Your Supply Chain | Agilent Freight",
   description:
     "A practical importer advisory on classification, customs value, origin evidence, permits, tax treatment and the decisions that shape landed cost.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "The Government Is Already in Your Supply Chain",
     description:
       "The invoice and freight quote tell only part of the story. Understand the trade decisions that shape your real import cost.",
     type: "article",
+    url: "/blog",
+    siteName: "Agilent Freight",
+    locale: "en_ZW",
+    images: [
+      {
+        url: "/images/importer-advisory.jpg",
+        width: 1080,
+        height: 720,
+        alt: "Freight port at sunset with trade compliance documents and an import checklist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Government Is Already in Your Supply Chain | Agilent Freight",
+    description:
+      "A practical importer advisory on the trade decisions that shape landed cost.",
     images: ["/images/importer-advisory.jpg"],
   },
 };

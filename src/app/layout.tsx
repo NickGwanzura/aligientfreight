@@ -10,7 +10,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aligientfreight.com"),
+  metadataBase: new URL("https://agilentzw.com"),
   title: "Agilent Freight | The Corridor Managers",
   description:
     "Agilent Freight delivers intelligent freight forwarding, corridor management, and trade logistics solutions across Southern Africa and global trade routes. Agile in Motion. Intelligent in Mind.",
