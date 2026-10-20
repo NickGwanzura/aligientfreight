@@ -7,11 +7,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#corridors", label: "Corridors" },
-  { href: "#industries", label: "Industries" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#corridors", label: "Corridors" },
+  { href: "/#industries", label: "Industries" },
+  { href: "/blog", label: "Insights" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -101,7 +102,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="#contact"
+              href="/#contact"
               className="px-5 py-2.5 bg-white text-[#245F8F] text-xs font-semibold tracking-wide uppercase transition-colors hover:bg-white/85"
             >
               Get a Quote
@@ -144,7 +145,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href="/#contact"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}

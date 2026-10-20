@@ -230,3 +230,70 @@ html {
   opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
+
+/* Editorial article typography */
+.prose-copy {
+  color: #526c7e;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+.prose-copy .article-lede {
+  color: #294c66;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin: 0 0 2.5rem;
+}
+.prose-copy h2 {
+  color: #173b5a;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 3.5rem 0 1.15rem;
+  scroll-margin-top: 7rem;
+}
+.prose-copy h3 {
+  color: #173b5a;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.prose-copy p {
+  margin: 0 0 1.2rem;
+}
+.prose-copy blockquote {
+  border-left: 3px solid #2b78b8;
+  color: #245f8f;
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 2rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+.question-list {
+  border-top: 1px solid #dce6ec;
+  margin: 1.75rem 0 2rem;
+}
+.question-row {
+  border-bottom: 1px solid #dce6ec;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 2.25rem 1fr;
+  padding: 1.35rem 0;
+}
+.question-number {
+  color: #2b78b8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-top: 0.18rem;
+}
+.question-row p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0.4rem 0 0;
+}
+@media (max-width: 640px) {
+  .prose-copy .article-lede { font-size: 1.12rem; }
+  .question-row { grid-template-columns: 1.75rem 1fr; }
+}

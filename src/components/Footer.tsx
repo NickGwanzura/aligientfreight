@@ -28,10 +28,11 @@ const footerLinks = {
     "Dar es Salaam Corridor",
   ],
   company: [
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Industries", href: "#industries" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "/#about" },
+    { label: "Services", href: "/#services" },
+    { label: "Industries", href: "/#industries" },
+    { label: "Insights", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
