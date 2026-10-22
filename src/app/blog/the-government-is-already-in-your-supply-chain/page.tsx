@@ -93,8 +93,8 @@ export default function ImporterAdvisoryPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b263d]/95 via-[#0b263d]/75 to-[#0b263d]/30" />
           <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end lg:pb-24">
             <div className="max-w-3xl">
-              <Link href="/" className="mb-10 inline-flex items-center gap-2 text-sm text-white/75 transition hover:text-white">
-                <ArrowLeft className="h-4 w-4" /> Back to Agilent Freight
+              <Link href="/blog" className="mb-10 inline-flex items-center gap-2 text-sm text-white/75 transition hover:text-white">
+                <ArrowLeft className="h-4 w-4" /> All trade insights
               </Link>
               <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-sky-200">
                 <span className="h-px w-8 bg-sky-300" /> Trade intelligence letter <span className="text-white/50">/ 01</span>
