@@ -35,6 +35,17 @@ const articles = [
     readTime: "12 min read",
     author: "Tafadzwa Madondo",
   },
+  {
+    number: "03",
+    title: "The Airfreight Squeeze: When Fuel Costs Double and Capacity Becomes a Strategic Asset",
+    description:
+      "Jet fuel prices and tight air cargo capacity are changing the airfreight equation. Here is how Zimbabwean importers and exporters can protect delivery timelines and control total shipment cost.",
+    href: "/blog/air-freight-costs-zimbabwe-fuel-capacity-peak-season",
+    image: "/images/airfreight-squeeze-cover.webp",
+    alt: "Agilent Freight airfreight insight on rising jet fuel costs, tight cargo capacity and peak-season shipping for Zimbabwean businesses",
+    readTime: "9 min read",
+    author: "Agilent Freight",
+  },
 ];
 
 export default function BlogPage() {
