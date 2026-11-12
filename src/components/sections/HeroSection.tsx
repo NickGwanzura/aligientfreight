@@ -1,318 +1,93 @@
-"use client";
-
-import { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { ArrowRight, ArrowDown, Play } from "lucide-react";
-
-interface Particle {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  speed: number;
-  opacity: number;
-  drift: number;
-  duration: number;
-  delay: number;
-}
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 
 export default function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [particles] = useState<Particle[]>(() =>
-    Array.from({ length: 40 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2 + 0.5,
-      speed: Math.random() * 0.5 + 0.2,
-      opacity: Math.random() * 0.4 + 0.1,
-      drift: Math.random() * 20 - 10,
-      duration: 8 + Math.random() * 12,
-      delay: Math.random() * 5,
-    }))
-  );
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
-  const smoothMouseX = useSpring(0, { stiffness: 50, damping: 20 });
-  const smoothMouseY = useSpring(0, { stiffness: 50, damping: 20 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 2;
-      const y = (e.clientY / window.innerHeight - 0.5) * 2;
-      smoothMouseX.set(x * 15);
-      smoothMouseY.set(y * 15);
-      setMousePos({ x, y });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [smoothMouseX, smoothMouseY]);
-
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen w-full overflow-hidden bg-white"
-    >
-      {/* Background layer with parallax */}
-      <motion.div className="absolute inset-0" style={{ y, scale }}>
-        {/* Pure white base */}
-        <div className="absolute inset-0 bg-white" />
+    <section className="relative isolate overflow-hidden bg-[#f2f7fb] text-[#173b5a]">
+      <div aria-hidden="true" className="pointer-events-none absolute -left-40 top-10 h-[34rem] w-[34rem] rounded-full bg-[#2b78b8]/[0.045] blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute right-[38%] top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-[#173b5a]/[0.06] to-transparent lg:block" />
 
-        {/* Subtle radial gradient following mouse */}
-        <motion.div
-          className="absolute inset-0 opacity-[0.08]"
-          style={{
-            background: `radial-gradient(600px circle at ${50 + mousePos.x * 20}% ${50 + mousePos.y * 20}%, rgba(0,0,0,0.08), transparent 60%)`,
-          }}
-        />
-
-        {/* Grid lines */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.2) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
-          }}
-        />
-
-        {/* Floating particles */}
-        {particles.map((particle) => (
-          <motion.div
-            key={particle.id}
-            className="absolute rounded-full bg-black"
-            style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-              width: particle.size,
-              height: particle.size,
-              opacity: particle.opacity,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              x: [0, particle.drift, 0],
-              opacity: [particle.opacity, particle.opacity * 1.5, particle.opacity],
-            }}
-            transition={{
-              duration: particle.duration,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: particle.delay,
-            }}
-          />
-        ))}
-
-        {/* Animated horizontal scan lines */}
-        <motion.div
-          className="absolute left-0 right-0 h-px bg-black/5"
-          animate={{ top: ["0%", "100%"] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div
-          className="absolute left-0 right-0 h-px bg-black/5"
-          animate={{ top: ["100%", "0%"] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear", delay: 2 }}
-        />
-
-        {/* Route lines - subtle white/gray */}
-        <svg
-          className="absolute inset-0 h-full w-full"
-          viewBox="0 0 1400 900"
-          preserveAspectRatio="xMidYMid slice"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#000" stopOpacity="0" />
-              <stop offset="30%" stopColor="#000" stopOpacity="0.3" />
-              <stop offset="70%" stopColor="#000" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#000" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          {[
-            { d: "M-100,200 Q300,100 500,250 T1100,180 T1300,350", dur: 10 },
-            { d: "M-100,400 Q400,300 700,450 T1200,380 T1400,500", dur: 12 },
-            { d: "M-100,600 Q500,500 800,650 T1300,550 T1500,700", dur: 14 },
-            { d: "M-100,100 Q250,200 600,120 T1000,220 T1400,150", dur: 11 },
-            { d: "M-100,500 Q350,600 900,480 T1300,600", dur: 13 },
-          ].map((route, i) => (
-            <g key={i}>
-              <path
-                d={route.d}
-                fill="none"
-                stroke="rgba(0,0,0,0.06)"
-                strokeWidth="1"
-                strokeDasharray="8 8"
-              />
-              <motion.path
-                d={route.d}
-                fill="none"
-                stroke="url(#routeGrad)"
-                strokeWidth="1.5"
-                strokeDasharray="60 200"
-                initial={{ strokeDashoffset: 300 }}
-                animate={{ strokeDashoffset: -300 }}
-                transition={{
-                  duration: route.dur,
-                  repeat: Infinity,
-                  ease: "linear",
-                  delay: i * 2,
-                }}
-              />
-            </g>
-          ))}
-        </svg>
-      </motion.div>
-
-      {/* Vignette overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/40 pointer-events-none" />
-
-      {/* Content */}
-      <motion.div
-        className="relative z-10 flex min-h-[100svh] flex-col justify-center px-5 pb-12 pt-28 sm:px-6 sm:pt-32 md:px-12 md:pb-16 lg:pt-40 lg:px-20"
-        style={{ y: textY, opacity }}
-      >
-        <div className="mx-auto w-full max-w-7xl">
-          {/* Interactive Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#2B78B8]/10 border border-[#2B78B8]/20 px-3.5 py-2 rounded-full mb-5 sm:mb-6 max-w-fit"
-          >
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2B78B8] opacity-50"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2B78B8]"></span>
+      <div className="relative mx-auto grid min-h-[640px] max-w-[1440px] items-center gap-12 px-5 pb-12 pt-10 sm:px-8 md:px-12 lg:min-h-[690px] lg:grid-cols-[minmax(0,1.02fr)_minmax(0,.98fr)] lg:gap-12 lg:px-16 lg:py-14 xl:gap-20 xl:px-20">
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#2b78b8]/20 bg-white/75 px-4 py-2.5 shadow-sm shadow-[#173b5a]/[0.04]">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2b78b8]/40 motion-reduce:animate-none" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#2b78b8]" />
             </span>
-            <span className="text-[10px] font-bold text-neutral-800 tracking-wider uppercase">
-              SADC Corridor Network Active
-            </span>
-          </motion.div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#35576e] sm:text-xs">Freight solutions from Zimbabwe across SADC</span>
+          </div>
 
-          {/* Top metadata row */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-6 sm:mb-8 flex max-w-xs items-center gap-3 text-neutral-500 text-[9px] sm:text-xs tracking-[0.16em] sm:tracking-[0.2em] uppercase flex-wrap"
-          >
-            <span>3 Dale Road Marlborough, Harare, Zimbabwe</span>
-            <span className="w-8 h-px bg-neutral-300 hidden sm:block" />
-            <span>Global Freight Solutions</span>
-          </motion.div>
+          <div className="mt-8 flex items-start gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#61788a] sm:text-xs">
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#2b78b8]" aria-hidden="true" />
+            <span>Harare, Zimbabwe <span className="mx-2 text-[#2b78b8]/55">/</span> Global freight solutions</span>
+          </div>
 
-          {/* Main headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-heading text-[2.85rem] leading-[0.98] sm:text-6xl sm:leading-none md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-tight"
-          >
-            <span className="block">Engineering</span>
-            <span className="block">
-              Cargo{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">Flow</span>
-                <motion.span
-                  className="absolute bottom-0.5 left-0 h-2 md:h-3 lg:h-4 bg-[#2B78B8]/20"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-                  style={{ originX: 0 }}
-                />
-              </span>
-            </span>
-            <span className="block text-neutral-400">Across Africa</span>
-          </motion.h1>
+          <h1 className="mt-6 max-w-2xl font-heading text-[clamp(3.3rem,6vw,5.7rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-[#173b5a]">
+            Engineering cargo flow <span className="text-[#2b78b8]">across Africa.</span>
+          </h1>
 
-          {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-6 sm:mt-8 max-w-xl text-[15px] sm:text-base text-neutral-600 md:text-lg leading-relaxed"
-          >
-            Agilent Freight delivers intelligent freight forwarding, corridor
-            management, and trade logistics solutions across Southern Africa and
-            global trade routes.
-          </motion.p>
+          <p className="mt-7 max-w-xl text-base leading-7 text-[#526c7e] sm:text-lg sm:leading-8">
+            Road, ocean and air freight, customs support and corridor coordination—planned as one connected movement from origin to delivery.
+          </p>
 
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-8 sm:mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
-          >
-            <a
-              href="#contact"
-              className="group relative inline-flex min-h-14 w-full items-center justify-center gap-3 bg-lime text-lime-foreground px-6 py-4 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase transition-all hover:bg-lime/85 active:scale-95 shadow-lg shadow-black/10 rounded-xl overflow-hidden sm:w-auto sm:px-8"
-            >
-              Request Freight Quote
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-xl bg-[#2b78b8] px-7 py-4 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-[#173b5a]/15 transition hover:bg-[#245f8f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2b78b8]">
+              Request a freight quote
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
-            <a
-              href="#about"
-              className="group inline-flex min-h-14 w-full items-center justify-center gap-3 border border-neutral-300 bg-white/60 backdrop-blur-sm text-neutral-800 px-6 py-4 text-xs sm:text-sm font-semibold tracking-[0.08em] uppercase transition-all hover:bg-neutral-50 hover:border-neutral-400 active:scale-95 rounded-xl sm:w-auto sm:px-8"
-            >
-              <Play className="h-4 w-4" />
-              Explore Capabilities
+            <a href="#services" className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-xl border border-[#173b5a]/15 bg-white/70 px-7 py-4 text-xs font-bold uppercase tracking-[0.12em] text-[#173b5a] transition hover:border-[#2b78b8]/50 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2b78b8]">
+              Explore capabilities
+              <ArrowUpRight className="h-4 w-4 text-[#2b78b8]" aria-hidden="true" />
             </a>
-          </motion.div>
+          </div>
 
-          {/* Bottom stats row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="mt-12 sm:mt-16 md:mt-24 grid grid-cols-3 gap-3 sm:gap-8 border-t border-neutral-200 pt-6 sm:pt-8 max-w-lg"
-          >
-            {[
-              { value: "15+", label: "Countries" },
-              { value: "24/7", label: "Operations" },
-              { value: "99.2%", label: "On-Time" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-left">
-                <div className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-black">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.2em] text-neutral-500">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <div className="mt-10 grid max-w-xl grid-cols-3 border-t border-[#173b5a]/12 pt-5 sm:mt-12 sm:pt-6">
+            <div className="pr-3 sm:pr-5">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#173b5a] sm:text-sm">Road</p>
+              <p className="mt-1.5 text-[11px] leading-5 text-[#61788a] sm:text-xs">Regional movement</p>
+            </div>
+            <div className="border-l border-[#173b5a]/12 px-3 sm:px-5">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#173b5a] sm:text-sm">Ocean & air</p>
+              <p className="mt-1.5 text-[11px] leading-5 text-[#61788a] sm:text-xs">Import and export</p>
+            </div>
+            <div className="border-l border-[#173b5a]/12 pl-3 sm:pl-5">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-[#173b5a] sm:text-sm">Customs</p>
+              <p className="mt-1.5 text-[11px] leading-5 text-[#61788a] sm:text-xs">Trade coordination</p>
+            </div>
+          </div>
         </div>
-      </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 right-8 z-10 hidden md:flex flex-col items-center gap-3"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-      >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-400 rotate-90 origin-center translate-x-4">
-          Scroll
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ArrowDown className="h-4 w-4 text-neutral-400" />
-        </motion.div>
-      </motion.div>
+        <div className="relative mx-auto w-full max-w-[700px] lg:max-w-none">
+          <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-[#2b78b8]/20 via-white to-[#f4c64e]/25 blur-xl" aria-hidden="true" />
+          <div className="relative min-h-[360px] overflow-hidden rounded-[1.5rem] bg-[#102d46] shadow-2xl shadow-[#173b5a]/20 sm:min-h-[460px] lg:min-h-[540px] xl:min-h-[580px]">
+            <Image
+              src="/global-logistics-port.png"
+              alt="Container ship, cargo aircraft and freight trucks connected at a port"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071e31]/90 via-[#071e31]/15 to-transparent" />
+            <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 sm:p-7">
+              <span className="rounded-full border border-white/30 bg-[#102d46]/60 px-3.5 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur sm:text-[10px]">Agilent Freight / SADC</span>
+              <span className="rounded-full bg-white p-2.5 shadow-lg"><Image src="/agilient-freight-logo.svg" alt="Agilent Freight" width={34} height={34} className="h-7 w-auto" /></span>
+            </div>
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/20 bg-[#0b2338]/75 p-5 text-white shadow-xl backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-6">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#9bddf6]">One connected movement</p>
+              <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 sm:gap-3">
+                <div><p className="text-xs font-semibold sm:text-sm">Origin</p><p className="mt-1 text-[10px] text-white/65 sm:text-xs">Supplier</p></div>
+                <span className="h-px w-full bg-[#75c9ed]/60" aria-hidden="true" />
+                <div><p className="text-xs font-semibold sm:text-sm">Border</p><p className="mt-1 text-[10px] text-white/65 sm:text-xs">Clearance</p></div>
+                <span className="h-px w-full bg-[#75c9ed]/60" aria-hidden="true" />
+                <div><p className="text-xs font-semibold sm:text-sm">Delivery</p><p className="mt-1 text-[10px] text-white/65 sm:text-xs">Destination</p></div>
+              </div>
+              <p className="mt-4 border-t border-white/15 pt-4 text-xs leading-relaxed text-white/75 sm:text-sm">We coordinate the hand-offs that keep cargo moving across regional and global trade routes.</p>
+            </div>
+          </div>
+          <p className="mt-3 text-right text-[10px] font-medium uppercase tracking-[0.16em] text-[#61788a]">Agile in Motion. Intelligent in Mind.</p>
+        </div>
+      </div>
     </section>
   );
 }

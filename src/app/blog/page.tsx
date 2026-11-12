@@ -46,6 +46,17 @@ const articles = [
     readTime: "9 min read",
     author: "Agilent Freight",
   },
+  {
+    number: "04",
+    title: "The Beitbridge Blame Trap: Why Finger-Pointing Guarantees the Queue Returns",
+    description:
+      "Beitbridge congestion is a queueing-system problem. Discover how Zimbabwe and SADC freight operators can find bottlenecks and prevent border delays.",
+    href: "/blog/beitbridge-blame-trap-queueing-system",
+    image: "/images/beitbridge-blame-trap-cover.webp",
+    alt: "Beitbridge border queue infographic showing freight stages from truck arrival and documentation to payment, inspection, release and parking capacity",
+    readTime: "13 min read",
+    author: "Tafadzwa Madondo",
+  },
 ];
 
 export default function BlogPage() {
