@@ -179,7 +179,7 @@
           "text": "The figures cited here reflect specific reports and dates, not guaranteed or current clearance times. Waiting-time and hourly-cost estimates in the 2026 Southern African Transport Conference paper cover four border posts; they are not Beitbridge-only weekly totals. TIP queue reports concern light vehicles and are used only to illustrate a bottleneck in a digitised process. The border-modernisation statistics are figures reported by the cited news source."
         },
         {
-          "type": "list",
+          "type": "ordered",
           "items": [
             "SABC News — High traffic at Beitbridge as BMA processes surge of travelers (16 December 2025): https://www.sabcnews.com/sabcnews/high-traffic-at-beitbridge-as-bma-processes-surge-of-travelers/",
             "ZimLive — Drivers face travel delays at Beitbridge in peak Christmas traffic (December 2025): https://www.zimlive.com/drivers-face-travel-delays-at-beitbridge-in-peak-christmas-traffic/",
